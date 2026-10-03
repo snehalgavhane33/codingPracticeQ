@@ -56,7 +56,7 @@ import java.util.*;
 }*/
 
 //approach 3 - Using recursion
-public class StringPalindrome {
+/*public class StringPalindrome {
 
        public static boolean isPalindrome(String s, int left ,int right){
         if(left>=right){
@@ -81,4 +81,24 @@ public static void main(String[] args) {
     sc.close();
 
 }
+}*/
+
+//Approach 4 - Using StringBuilder
+public class StringPalindrome {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a string:");
+        String s = sc.nextLine();
+
+        String rev = new StringBuilder(s).reverse().toString();
+
+        if(s.equals(rev)){
+            System.out.println("palindrome");
+        }else{
+            System.out.println("Not palindrome");
+        }
+
+    }
 }
